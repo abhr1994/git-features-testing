@@ -1,4 +1,4 @@
 This line is added in feature branch to create conflicts in merge
-File in the main branch
+File in the test branch
 File in the main branch but merged also from feature branch
 This line is added in feature branch to create conflicts in merge
