@@ -1,0 +1,27 @@
+name: Daily Summary
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Set the desired time for the daily run (UTC)
+
+jobs:
+  post-daily-summary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Daily Summary Script
+        run: node .github/scripts/daily-summary.js
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: 'YOUR_CHANNEL_ID'
