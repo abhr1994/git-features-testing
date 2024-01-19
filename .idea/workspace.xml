@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce50a088-7ed3-4d72-a52e-ab5376124478" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/daily-summary.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/daily-summary.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/slack_notification.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/scripts/daily-summary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/daily-summary.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
