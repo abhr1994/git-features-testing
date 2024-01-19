@@ -3,6 +3,7 @@ name: Daily Summary
 on:
   schedule:
     - cron: '0 12 * * *'  # Set the desired time for the daily run (UTC)
+  workflow_dispatch:
 
 jobs:
   post-daily-summary:
@@ -24,4 +25,4 @@ jobs:
         run: node .github/scripts/daily-summary.js
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_CHANNEL_ID: 'YOUR_CHANNEL_ID'
+          SLACK_CHANNEL_ID: 'test_bot'
