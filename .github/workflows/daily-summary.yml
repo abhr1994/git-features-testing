@@ -19,7 +19,9 @@ jobs:
           node-version: '14'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+              npm install
+              npm install @slack/web-api
 
       - name: Run Daily Summary Script
         run: node .github/scripts/daily-summary.js
