@@ -26,10 +26,10 @@ jobs:
         run: |
           curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"New Pull Request opened!\"}" ${{ secrets.SLACK_WEB_HOOK }}
 
-      - name: Notify on Push (Build Failure)
-        if: github.event_name == 'push' && failure()
+      - name: Notify on Push
+        if: github.event_name == 'push'
         run: |
-          curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"Build failed on branch: ${GITHUB_REF}\"}" ${{ secrets.SLACK_WEB_HOOK }}
+          curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"Code pushed to branch: ${GITHUB_REF}\"}" ${{ secrets.SLACK_WEB_HOOK }}
 
       - name: Notify on Critical Issue
         if: github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'critical')
